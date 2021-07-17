@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang='en'>
     <head>
         <title>Galactus</title>
@@ -12,5 +13,16 @@
               <input type="text" name="title" placeholder="Enter Here..">
               <button type="submit">Add</button> 
           </div> 
+        </form > 
+         {% for todo in list %}
+          <p>{{todo.id}}|{{todo.title}}</p>
+  
+          {% if todo.complete ==False %}
+            <span>Incomplete</span>       
+          {% else %}
+            <span>Done</span>
+          {% endif %}   
+   
+         {% endfor %}
     </body>
 </html>
